@@ -1,0 +1,42 @@
+{
+  "name": "make-your-own-chatbot",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "dev:css": "npx tailwindcss -w -i ./styles/app.css -o app/gen-styles/app-generated-do-not-edit.css",
+    "dev:remix": "remix watch",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public --binding $(cat .env)",
+    "dev": "remix build && run-p dev:*",
+    "start": "cross-env NODE_ENV=production npm run dev:wrangler",
+    "build:css": "npx tailwindcss -m -i ./styles/app.css -o app/gen-styles/app.css",
+    "build": "npm run build:css && remix build"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "^1.7.0",
+    "@remix-run/cloudflare-pages": "^1.7.0",
+    "@remix-run/react": "^1.7.0",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@remix-run/dev": "^1.7.0",
+    "@remix-run/eslint-config": "^1.7.0",
+    "@types/react": "^17.0.45",
+    "@types/react-dom": "^17.0.17",
+    "autoprefixer": "^10.4.7",
+    "concurrently": "^7.2.0",
+    "eslint": "^8.15.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "wrangler": "beta"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
