@@ -1,6 +1,6 @@
 # Make Your Own Chatbot
 
-Ever wanted to create a chatbot but weren't sure where to start?
+> Ever wanted to create a chatbot but weren't sure where to start?
 
 Fork this repo for a starter OpenAI-powered chatbot that you can easily customize and deploy.
 
