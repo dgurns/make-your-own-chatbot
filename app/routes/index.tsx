@@ -165,8 +165,10 @@ export default function Home() {
 				</div>
 
 				<div className="mt-8 text-sm text-gray-400 text-center">
-					Made with [Make Your Own
-					Chatbot](https://github.com/dgurns/make-your-own-chatbot)
+					Made with{' '}
+					<a href="https://github.com/dgurns/make-your-own-chatbot">
+						Make Your Own Chatbot
+					</a>
 				</div>
 			</div>
 		</div>
