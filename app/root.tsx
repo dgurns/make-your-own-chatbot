@@ -7,6 +7,7 @@ import {
 	Scripts,
 	ScrollRestoration,
 } from '@remix-run/react';
+import type { ErrorBoundaryComponent } from '@remix-run/react/dist/routeModules';
 import styles from './gen-styles/app-generated-do-not-edit.css';
 
 export const meta: MetaFunction = () => ({
@@ -45,12 +46,30 @@ export default function App() {
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
-				<script
-					defer
-					src="https://static.cloudflareinsights.com/beacon.min.js"
-					data-cf-beacon='{"token": "9ef13fb9d747442b86b236ed188a9d52"}'
-				></script>
 			</body>
 		</html>
 	);
 }
+
+export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+	return (
+		<html lang="en">
+			<head>
+				<Meta />
+				<Links />
+			</head>
+			<body>
+				<div className="flex flex-col items-center justify-start w-full h-screen">
+					<div className="flex w-full md:max-w-md h-screen md:h-auto flex-col items-center text-center justify-start py-8 px-4">
+						Oops! There was an error:
+						<span className="text-red-500">{error.message}</span>
+						Please reload the page.
+					</div>
+				</div>
+				<ScrollRestoration />
+				<Scripts />
+				<LiveReload />
+			</body>
+		</html>
+	);
+};

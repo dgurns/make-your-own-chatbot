@@ -595,10 +595,6 @@ a {
 
 /* custom classes go here */
 
-.static {
-  position: static;
-}
-
 .absolute {
   position: absolute;
 }
@@ -651,12 +647,12 @@ a {
   height: 6rem;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .resize-none {
@@ -738,14 +734,19 @@ a {
   padding: 0.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-8 {
@@ -763,6 +764,11 @@ a {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {

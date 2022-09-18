@@ -100,7 +100,13 @@ export default function Home() {
 	useEffect(() => {
 		if (data?.response) {
 			const newAiChat: Chat = { author: 'ai', text: data.response };
-			setChats([...chats, newAiChat]);
+			return setChats([...chats, newAiChat]);
+		} else if (data?.error) {
+			const newErrorChat: Chat = {
+				author: 'ai',
+				text: "Oops, I didn't get that. Could you try again?",
+			};
+			return setChats([...chats, newErrorChat]);
 		}
 	}, [data]);
 
@@ -150,7 +156,8 @@ export default function Home() {
 							name="prompt"
 							required
 							className="w-full h-24 resize-none bg-gray-400 rounded p-3 pr-24 text-gray-900 placeholder:text-gray-600"
-							placeholder="Start chatting with Garth..."
+							// Customize the prompt with your chatbot's name
+							placeholder="Start chatting with [Oz]..."
 							onKeyDown={onKeyDown}
 						></textarea>
 						<button type="submit" className="absolute bottom-3 right-3">
