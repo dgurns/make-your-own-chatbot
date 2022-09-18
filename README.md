@@ -4,11 +4,18 @@
 
 Fork this repo for a starter OpenAI-powered chatbot that you can easily customize and deploy.
 
+<img width="1080" alt="Screen Shot 2022-09-18 at 1 57 03 PM" src="https://user-images.githubusercontent.com/1173791/190903207-0c1aeb92-b8af-411d-bd03-988e178c4faa.png">
+
 Built with [Remix](https://remix.run) and [TailwindCSS](https://tailwindcss.com), deployed to [Cloudflare Pages](https://pages.cloudflare.com). AI is powered by [OpenAI](https://openai.com/api).
 
 All code in this project is MIT licensed
 
 Created by [Dan Gurney](https://dangurney.net)
+
+## Examples
+
+- [Talk to Dan](https://talktodan.pages.dev)
+- [Talk to Garth](https://talktogarth.pages.dev)
 
 ## Setup
 
