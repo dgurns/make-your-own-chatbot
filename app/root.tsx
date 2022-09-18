@@ -12,7 +12,8 @@ import styles from './gen-styles/app-generated-do-not-edit.css';
 
 export const meta: MetaFunction = () => ({
 	charset: 'utf-8',
-	title: 'Talk to Garth',
+	// Customize the title with your chatbot's name
+	title: 'Talk to [Oz]',
 	viewport: 'width=device-width,initial-scale=1',
 });
 
